@@ -1,0 +1,35 @@
+<h1>{{headearName}}</h1>
+
+<p>
+ Read CSV data
+</p>
+
+<input type="file" name="files" class="form-control" 
+                     #uploads  (change)="onChange(uploads.files)" 
+                     value="process"/><br/><br/>
+
+                     Filter: <input type="text" [(ngModel)]="filterCount" (keyup)='filterBasedonColumn($event,"issue_Count")'/>
+
+<div>
+  <br/>
+  <table border="1px">
+    <thead>
+        <tr>
+            <td> First name</td>
+            <td> Sur name </td>
+            <td> Issue Count</td>
+            <td> Date of Birth </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let record of dataList">
+            <td> {{record.first_name}} </td>
+            <td> {{record.sur_name}} </td>
+            <td> {{record.issue_Count}} </td>
+            <td> {{record.dob}} </td>
+        </tr>
+
+    </tbody>
+</table>
+
+</div>
