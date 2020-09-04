@@ -16,7 +16,7 @@
     "rxjs": "~6.3.3",
     "core-js": "2.5.1",
     "zone.js": "0.8.20",
-    "papaparse": "4.3.7"
+    "papaparse": "5.2.0"
   },
   "scripts": {
     "ng": "ng",
